@@ -2,8 +2,7 @@
 
 /*This function returns the value associated with 'whichParam' on the URL*/
 
-function getURLParameters(whichParam) {
-	
+function getURLParameters(whichParam) {	
     var pageURL = window.location.search.substring(1);
     var pageURLVariables = pageURL.split('&');
     for(var i = 0; i < pageURLVariables.length; i++) {
@@ -84,7 +83,7 @@ socket.on('join_room_response', function(payload){
 	var newHTML = '<p>' + payload.username+ ' just entered the lobby</p>';
 	var newNode = $(newHTML);
 	newNode.hide();
-	$('#message').append(newNode);
+	$('#messages').append(newNode);
 	newNode.slideDown(1000);
 });
 	
@@ -105,7 +104,7 @@ socket.on('player_disconnected', function(payload){
 	var dom_elements = $('.socket_' +payload.socket_id);
 	
 	/*If something exists*/
-	if(dom_elements.length != 0){
+	if(dom_elements.length == 0){
 		dom_elements.slideUp(1000);
 	}
 	
@@ -113,7 +112,7 @@ socket.on('player_disconnected', function(payload){
 	var newHTML = '<p>' + payload.username+ ' just left the lobby</p>';
 	var newNode = $(newHTML);
 	newNode.hide();
-	$('#message').append(newNode);
+	$('#messages').append(newNode);
 	newNode.slideDown(1000);
 });
 	
