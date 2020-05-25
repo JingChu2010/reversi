@@ -29,10 +29,16 @@ td.hovered_over:hover {
 }
 
 
+#my_color{
+	font-size: 30px;
+	color: white;
+}
 
-
-
-
+#whitesum, #blacksum{
+	font-size: 24px;
+	color: white;
+	font-weight: bold;
+}
 
 
 
