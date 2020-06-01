@@ -271,7 +271,7 @@ $(function(){
 	console.log('*** Client Log Message: \'join_room\' payload: ' + JSON.stringify(payload));
 	socket.emit('join_room', payload);
 	
-	$('#quit').append('<a href ="lobby.html?username='+username+'" class="btn btn-danger btn-default active" role="button" aria-pressed="true">Quit</a>')
+	$('#quit').append('<a href ="lobby.html?username='+username+'" class="btn btn-danger btn-default active" role="button" aria-pressed="true"><img src="assets/images/quit.png" alt="quit icon" width=20 />  Quit </a>')
 	
 });
 
@@ -320,7 +320,7 @@ socket.on('game_update',function(payload){
 		return;
 	}
 	
-	$('#my_color').html('<h3 id = "my_color">I am '+my_color+'</h3>');
+	$('#my_color').html('<h3 id = "my_color">'+my_color+' player</h3>');
 	$('#my_color').append('<h4>It is '+payload.game.whose_turn+'\'s turn. Elapsed time <span id = "elapsed"></span></h4>');
 	
 	clearInterval(interval_timer);

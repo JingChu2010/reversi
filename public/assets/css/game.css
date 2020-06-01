@@ -4,22 +4,22 @@ body {
         
 table#game_board{
 	margin:auto;
-	border-style: solid;
-	border-width: 10px;
+	border-style: double;
+	border-width: 18px;
 	border-color: rgb(100, 100, 100);
 }
 
 table#game_board td{
 	padding: 5px;
-	border-style: solid;
-	border-width: 1px;
-	border-color: rgb(50, 50, 50);
-	
+	border-style: double;
+	border-width: 6px;
+	border-color: rgb(35, 183, 101);
 }
 
+
+
 #messages p{
-	margin:0px;
-	
+	color: white;
 }
 
 td.hovered_over:hover {
@@ -32,21 +32,60 @@ td.hovered_over:hover {
 #my_color{
 	font-size: 30px;
 	color: white;
+	
 }
 
-#whitesum, #blacksum{
-	font-size: 24px;
+#whitesum {
+	font-size: 30px;
 	color: white;
 	font-weight: bold;
 }
 
+#whitePlayer{
+	font-size: 16px;
+	color: white;
+	margin-top:10px;
+	margin-bottom: 0;
+	font-weight: bold;
+}
 
+#blacksum {
+	font-size: 30px;
+	color: dimgrey;
+	font-weight: bold;
+}
 
+#blackPlayer{
+	font-size: 16px;
+	color: dimgray;
+	margin-top:10px;
+	margin-bottom: 0;
+	font-weight: bold;
+}
 
+h3 {
+	font-size: 30px;
+	color: white;
+}
 
+#player1{
 
+	border-radius: 25px;
+	background-color: dimgray
+} 
 
+#player2{
 
+	border-radius: 25px;
+	background-color: floralwhite;
+}
+
+#vs {
+	font-weight: bold;
+	font-size: 30px;
+	color: white;
+	margin-top: 10px;
+}
 
 
 

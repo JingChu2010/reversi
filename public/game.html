@@ -13,24 +13,39 @@
   </head>
     
   <body>
+	<br>
 	<div class='container-fluid text-center'>
         <div class='row'>
 			<div class='offset-2 col text-center'>
 				<h3 id='my_color'></h3>
 			</div>
 			<div class='col-2'>
-				<div id='quit'></div>
+				<div id='quit'>
+				
+				</div>
 			</div>
 		</div>
 		
+		<br>
+		<br>
 		<div class='row'>
-			<div class='col'>
+			
+			<div class='col-3'></div>
+			<div class='col-2' id='player1'>
+				<p id='whitePlayer'>WHITE PLAYER</p>
 				<span class='align-middle' id='whitesum'></span>
-				<img src='assets/images/empty_to_white.gif' alt='white score'/>
-				<img src='assets/images/empty_to_black.gif' alt='black score'/>
-				<span class='align-middle' id='blacksum'></span>
+				<img src='assets/images/empty_to_white.gif' alt='white score' width=40 />
 			</div>
+			<div class='col-2' id='vs'> VS </div>
+			<div class='col-2' id='player2'>
+				<p id='blackPlayer'>BLACK PLAYER</p>
+				<img src='assets/images/empty_to_black.gif' alt='black score' width=40 />
+				<span class='align-middle' id='blacksum'></span>
+			</div>	
+			<div class='col-3'></div>
 		</div>
+		
+		<br>
 		
 		<div class='row'>
 			<div class='col' id='game_over'>
@@ -124,14 +139,14 @@
 			</div>
 		</div>
 		
-		
+		<br>
 		<div class='row'>
-			<div class='col text-left'>
+			<div class='col text-middle'>
 				<h3>Messages</h3>
 				<form class='form-inline' onsubmit='send_message(); return false;'>
 					<label for='send_message_holder' class='col-form-label sr-only'>Enter your chat message</label>
 					<input class='form-control mx-auto w-75' type='text' value='' id='send_message_holder' placeholder='Enter your chat message' autocomplete='off'/>
-					<button type='submit' class='btn btn-default btn-primary'>Send</button>
+					<button type='submit' class='btn btn-default btn-primary'>Send Message</button>
  				</form>
 			</div>
 		</div>
